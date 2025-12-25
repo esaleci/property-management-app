@@ -1,0 +1,166 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Background - Clean light gray */
+  --background: hsl(220 20% 97%);
+  --foreground: hsl(220 30% 15%);
+
+  /* Card - Pure white */
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(220 30% 15%);
+
+  /* Popover */
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(220 30% 15%);
+
+  /* Primary - Modern teal/green like Bayut */
+  --primary: hsl(168 76% 36%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  /* Secondary - Soft gray */
+  --secondary: hsl(220 15% 92%);
+  --secondary-foreground: hsl(220 30% 25%);
+
+  /* Muted */
+  --muted: hsl(220 15% 94%);
+  --muted-foreground: hsl(220 15% 45%);
+
+  /* Accent - Light teal */
+  --accent: hsl(168 50% 94%);
+  --accent-foreground: hsl(168 76% 30%);
+
+  /* Destructive */
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  /* Borders */
+  --border: hsl(220 15% 88%);
+  --input: hsl(220 15% 88%);
+  --ring: hsl(168 76% 36%);
+
+  /* Charts */
+  --chart-1: hsl(168 76% 36%);
+  --chart-2: hsl(220 80% 55%);
+  --chart-3: hsl(280 70% 55%);
+  --chart-4: hsl(40 90% 50%);
+  --chart-5: hsl(350 80% 55%);
+
+  --radius: 0.75rem;
+
+  /* Sidebar */
+  --sidebar-background: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(220 30% 15%);
+  --sidebar-primary: hsl(168 76% 36%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(220 15% 96%);
+  --sidebar-accent-foreground: hsl(220 30% 15%);
+  --sidebar-border: hsl(220 15% 90%);
+  --sidebar-ring: hsl(168 76% 36%);
+}
+
+.dark {
+  --background: hsl(220 20% 97%);
+  --foreground: hsl(220 30% 15%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(220 30% 15%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(220 30% 15%);
+  --primary: hsl(168 76% 36%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(220 15% 92%);
+  --secondary-foreground: hsl(220 30% 25%);
+  --muted: hsl(220 15% 94%);
+  --muted-foreground: hsl(220 15% 45%);
+  --accent: hsl(168 50% 94%);
+  --accent-foreground: hsl(168 76% 30%);
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(220 15% 88%);
+  --input: hsl(220 15% 88%);
+  --ring: hsl(168 76% 36%);
+  --chart-1: hsl(168 76% 36%);
+  --chart-2: hsl(220 80% 55%);
+  --chart-3: hsl(280 70% 55%);
+  --chart-4: hsl(40 90% 50%);
+  --chart-5: hsl(350 80% 55%);
+  --sidebar-background: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(220 30% 15%);
+  --sidebar-primary: hsl(168 76% 36%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(220 15% 96%);
+  --sidebar-accent-foreground: hsl(220 30% 15%);
+  --sidebar-border: hsl(220 15% 90%);
+  --sidebar-ring: hsl(168 76% 36%);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 12px;
+}
